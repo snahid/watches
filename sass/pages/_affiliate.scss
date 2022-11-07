@@ -1,0 +1,47 @@
+.affiliate-wrapper{
+    margin-top: 150px;
+    margin-bottom: 100px;
+    .affiliate-inner{
+        h1{
+            text-align: center;
+            color: #111827;
+            margin-bottom: 30px;
+        }
+        form{
+            .form-group{
+                margin-top: 20px;
+            }
+            label{
+                color: #6b7280;
+                font-size: 18px;
+                font-weight: 500;
+                margin-bottom: 5px;
+            }
+            input{
+                border: 1px solid rgba(229,231,235,0.9);
+                padding: 10px 15px;
+            }
+            .submit-btn-wrapper{
+                margin-top: 30px;
+                text-align: center;
+                .submit-btn{
+                    transition: 0.3s;
+                    background: #212b36;
+                    border: 1.5px solid #212b36;
+                    color: #fff;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    padding: 12px 40px;
+                    font-size: 18px;
+                    border-radius: 5px;
+
+                    &:hover {
+                        background-color: #AB6857;
+                        color: #fff;
+                        border-color: #AB6857;
+                    }
+                }
+            }
+        }
+    }
+}
