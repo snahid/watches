@@ -220,12 +220,12 @@ footer{
     .footer-inner-wrapper{
         background-color: $black;
         border-radius: 30px;
-        padding: 200px 30px 70px 50px;
+        padding: 100px 30px 50px 30px;
         @media(max-width: 1440px){
-            padding: 150px 30px 50px 50px;
+            padding: 100px 30px 50px 30px;
         }
         @media(max-width: 1199px){
-            padding: 120px 30px 50px 50px;
+            padding: 100px 30px 50px 30px;
         }
         @media(max-width: 767px){
             padding: 70px 15px 30px 15px;
@@ -233,7 +233,54 @@ footer{
         @media(max-width: 400px){
             padding: 50px 15px 20px 15px;
         }
+        // Phone wrapper 
+        .footer-address{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            padding-bottom: 30px;
+            .footer-address-box{
+                border-right: 1px solid rgba(64,64,64,.6);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                &:last-child{
+                    border-right: 0px solid transparent;
+                }
+                p{
+                    font-size: 16px;
+                    color: $white;
+                    margin-bottom: 5px;
+                }
+                .phone-box{
+                    a{
+                        text-decoration: none;
+                        color: $white;
+                    }
+                    .first-phone{
+                        padding-right: 30px;
+                        position: relative;
+                        &::after{
+                            position: absolute;
+                            right: 10px;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            content: "";
+                            background-color: $white;
+                            width: 5px;
+                            height: 2px;
+                        }
+                    }
+                }
+            }
+        }
+        // Phone wrapper 
+
+
         .footer-inner-top{
+            border-top: 1px solid rgba(64,64,64,.6);
+            padding-top: 30px;
+            padding-bottom: 30px;
             width: 100%;
             margin-left: auto;
             display: flex;
@@ -253,10 +300,34 @@ footer{
             }
            
             .footer-top-box{
-                &:first-child{
-                    width: 23%;
+                // Subscribe 
+                .subscribe-top{
                     display: flex;
-                    align-items: center;
+                    flex-direction: row;
+                    // align-items: center;
+                    .subscribe-left{
+                        margin-right: 10px;
+                        margin-top: -7px;
+                        i{
+                            font-size: 80px;
+                            color: $white;
+                        }
+                    }
+                    .subscribe-right{
+                        h6{
+                            margin-bottom: 10px;
+                        }
+                        p{
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+                // Subscribe 
+
+                &:first-child{
+                    width: 17%;
+                    // display: flex;
+                    // align-items: center;
                     @media(max-width: 1199px){
                         grid-column-start: 1;
                         grid-column-end: 5;
@@ -268,30 +339,34 @@ footer{
                     }
                     a{
                         img{
-                            max-width: 90%;
+                            max-width: 80%;
+                            margin-top: -7px;
                             @media(max-width: 1199px){
-                                max-width: 200px;
+                                max-width: 150px;
                             }
                         }
                     }
                 }
                 &:nth-child(2){
-                    width: 17%;
+                    width: 15%;
                     @media(max-width: 1199px){
                         width: 100%;
                     }
                 }
                 &:nth-child(3){
-                    width: 20%;
+                    width: 15%;
                     @media(max-width: 1199px){
                         width: 100%;
                     }
                 }
+                &:nth-child(4){
+                    width: 15%;
+                }
                 &:last-child{
-                    width: 40%;
+                    width: 35%;
                     display: flex;
                     flex-direction: column;
-                    justify-content: space-between;
+                    // justify-content: space-between;
                     @media(max-width: 1199px){
                         width: 100%;
                     }
@@ -309,7 +384,7 @@ footer{
                         list-style: none;
                         margin-bottom: 10px;
                         a{
-                            font-size: 24px;
+                            font-size: 15px;
                             font-weight: 500;
                             color: $white;
                             transition: 0.3s;
@@ -333,9 +408,10 @@ footer{
                 }
                 h6{
                     font-weight: 500;
-                    font-size: 24px;
-                    color: $white;
+                    font-size: 15px;
+                    color: rgba(255,255,255,0.8);
                     text-transform: uppercase;
+                    margin-bottom: 25px;
                     @media(max-width: 1440px){
                         font-size: 19px;
                     }
@@ -351,12 +427,14 @@ footer{
                     }
                 }
                 form{
+                    margin-top: 30px;
                     display: flex;
                     flex-direction: row;
                     align-items: center;
                     border: 1px solid $white;
                     border-radius: 77px;
                     input{
+                        font-size: 15px;
                         background-color: transparent;
                         color: $white;
                         border: none;
@@ -389,7 +467,7 @@ footer{
                 }
                 p{
                     font-weight: 400;
-                    font-size: 20px;
+                    font-size: 15px;
                     text-transform: capitalize;
                     color: $white;
                     margin-bottom: 10px;
@@ -410,16 +488,25 @@ footer{
             }
         }
         .footer-inner-bottom{
-            margin-top: 20px;
+            border-top: 1px solid rgba(64,64,64,.6);
+            padding-top: 30px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
             @media(max-width: 767px){
                 text-align: center;
             }
             .social-wrapper{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
                 h6{
                     font-weight: 500;
-                    font-size: 24px;
+                    font-size: 15px;
                     color: $white;
-                    margin-bottom: 20px;
+                    margin-bottom: 0px;
+                    margin-right: 25px;
                     @media(max-width: 1440px){
                         font-size: 19px;
                         margin-bottom: 10px;
@@ -437,12 +524,12 @@ footer{
                         text-decoration: none;
                         color: $white;
                         // color: $black;
-                        font-size: 28px;
-                        padding: 3.5px 11px;
+                        font-size: 20px;
+                        padding: 1.5px 7px;
                         // background-color: $white;
                         transition: 0.3s;
                         border-radius: 50%;
-                        margin-right: 5px;
+                        margin-right: 0px;
                         @media(max-width: 1440px){
                             font-size: 19px;
                             padding: 3px 8.5px;
@@ -454,6 +541,13 @@ footer{
                     }
 
                     
+                }
+            }
+            .social-right{
+                p{
+                    margin-bottom: 0;
+                    color: $white;
+                    font-size: 14px;
                 }
             }
         }

@@ -1,5 +1,5 @@
 .product-details {
-  background-color: #e0dbd4;
+  background-color: #fbf9fa;
 }
 
 .products-outer-wrapper {
@@ -923,7 +923,7 @@
 // Header
 .header-inner {
   .header-inner-wrapper {
-    padding: 30px 0;
+    padding: 20px 0;
     .header-inner-left {
       width: 33%;
       text-align: center;
@@ -1090,7 +1090,7 @@
       }
       a{
         img{
-          width: 50%;
+          width: 35%;
         }
       }
     }
@@ -1161,6 +1161,11 @@
               background-color: transparent;
               padding: 0;
               border: none;
+              img{
+                border-radius: 50%;
+                width: 30px;
+                height: 30px;
+              }
 
               &::after {
                 display: none;
