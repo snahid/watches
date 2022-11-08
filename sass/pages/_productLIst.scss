@@ -238,28 +238,55 @@ footer{
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
             padding-bottom: 30px;
+            @media(max-width: 600px){
+                grid-template-columns: 1fr;
+                grid-row-gap: 15px;
+            }
             .footer-address-box{
                 border-right: 1px solid rgba(64,64,64,.6);
                 display: flex;
                 align-items: center;
-                justify-content: center;
+                // justify-content: center;
                 flex-direction: column;
+                @media(max-width: 600px){
+                    border-bottom: 1px solid rgba(64,64,64,.6);
+                    border-right: 0px solid transparent;
+                    padding-bottom: 15px;
+                }
                 &:last-child{
                     border-right: 0px solid transparent;
+                    @media(max-width: 600px){
+                        border-bottom: 0px solid transparent;
+                        padding-bottom: 0px;
+                    }
                 }
+                
                 p{
                     font-size: 16px;
                     color: $white;
                     margin-bottom: 5px;
+                    @media(max-width: 1199px){
+                        font-size: 14px;
+                    }
                 }
                 .phone-box{
+                    @media(max-width: 1199px){
+                        display: flex;
+                        flex-direction: column;
+                    }
                     a{
                         text-decoration: none;
                         color: $white;
+                        @media(max-width: 1199px){
+                            font-size: 14px;
+                        }
                     }
                     .first-phone{
                         padding-right: 30px;
                         position: relative;
+                        @media(max-width: 1199px){
+                            padding-right: 0;
+                        }
                         &::after{
                             position: absolute;
                             right: 10px;
@@ -269,6 +296,9 @@ footer{
                             background-color: $white;
                             width: 5px;
                             height: 2px;
+                            @media(max-width: 1199px){
+                                display: none;
+                            }
                         }
                     }
                 }
@@ -305,9 +335,15 @@ footer{
                     display: flex;
                     flex-direction: row;
                     // align-items: center;
+                    @media(max-width: 1199px){
+                        align-items: center;
+                    }
                     .subscribe-left{
                         margin-right: 10px;
                         margin-top: -7px;
+                        @media(max-width: 575px){
+                            margin-top: 0;
+                        }
                         i{
                             font-size: 80px;
                             color: $white;
@@ -352,15 +388,24 @@ footer{
                     @media(max-width: 1199px){
                         width: 100%;
                     }
+                    @media(max-width: 1199px){
+                        width: 100%;
+                    }
                 }
                 &:nth-child(3){
                     width: 15%;
                     @media(max-width: 1199px){
                         width: 100%;
                     }
+                    @media(max-width: 1199px){
+                        width: 100%;
+                    }
                 }
                 &:nth-child(4){
                     width: 15%;
+                    @media(max-width: 1199px){
+                        width: 100%;
+                    }
                 }
                 &:last-child{
                     width: 35%;
@@ -370,10 +415,11 @@ footer{
                     @media(max-width: 1199px){
                         width: 100%;
                     }
-                    @media(max-width: 575px){
+                    @media(max-width: 1199px){
+                        margin-top: 40px;
                         width: 100%;
                         grid-column-start: 1;
-                        grid-column-end: 4;
+                        grid-column-end: 5;
                         
                     }
                 }
@@ -383,6 +429,9 @@ footer{
                     li{
                         list-style: none;
                         margin-bottom: 10px;
+                        @media(max-width: 575px){
+                            margin-bottom: 5px;
+                        }
                         a{
                             font-size: 15px;
                             font-weight: 500;
@@ -396,6 +445,9 @@ footer{
                             }
                             @media(max-width: 767px){
                                 font-size: 16px;
+                            }
+                            @media(max-width: 575px){
+                                font-size: 14px;
                             }
                             &:hover{
                                 padding-left: 10px;
@@ -424,6 +476,7 @@ footer{
                     @media(max-width: 575px){
                         margin-top: 10px;
                         margin-bottom: 15px;
+                        font-size: 14px;
                     }
                 }
                 form{
@@ -482,7 +535,7 @@ footer{
                     }
                     @media(max-width: 575px){
                         margin-top: 10px;
-                        line-height: 24px;
+                        line-height: 20px;
                     }
                 }
             }
@@ -496,11 +549,15 @@ footer{
             justify-content: space-between;
             @media(max-width: 767px){
                 text-align: center;
+                flex-direction: column;
             }
             .social-wrapper{
                 display: flex;
                 flex-direction: row;
                 align-items: center;
+                @media(max-width: 767px){
+                    margin-bottom: 15px;
+                }
                 h6{
                     font-weight: 500;
                     font-size: 15px;
